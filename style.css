@@ -1,0 +1,369 @@
+body {
+  font-family: "Montserrat", serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+.main {
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
+}
+
+.sidebar {
+  background-color: black;
+  width: 340px;
+  border-radius: 1rem; /* 1 rem is equal to 16px*/
+  margin-right: 0.5rem;
+}
+
+.main-content {
+  background-color: #121212;
+  flex: 1; /* give me the rest of the space in the container */
+  border-radius: 1rem;
+  overflow: auto;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+  padding: 0.5rem 0.75rem;
+  line-height: 2.5rem;
+  opacity: 0.5;
+}
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+.nav-option a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 1rem;
+  height: 100%;
+  margin-top: 0.5rem;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+
+.lib-option img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.icons {
+  font-size: 1.2rem;
+  display: flex;
+}
+.icons i {
+  opacity: 0.5;
+  margin-right: 1rem;
+}
+.icons i:hover {
+  opacity: 1;
+}
+
+.box {
+  height: 8rem;
+  background-color: #232323;
+  border-radius: 0.77rem;
+  margin: 0.75rem 0 1.75rem 0;
+  padding: 1rem 1.5rem;
+}
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+}
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 2.5rem;
+}
+.badge {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.25rem 1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: fit-content;
+  opacity: 0.6;
+}
+.badge:hover {
+  opacity: 1;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+}
+.sticky-nav-icons {
+  margin-left: 1rem;
+}
+
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.sticky-nav-options .nav-item {
+  margin-right: 1.5rem;
+}
+#user {
+  margin-top: 0.6rem;
+}
+.dark-badge {
+  color: white;
+  background-color: black;
+}
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+.card {
+  background-color: #232323;
+  width: 150px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+.cards-container {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  /* background-color:red; */
+}
+
+.card-img {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.card-title {
+  font-weight: 700;
+}
+.card-info {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.footer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 90%;
+  height: 50%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+}
+
+.music-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.album {
+  width: 25%;
+  /* background-color: pink; */
+}
+.player {
+  width: 50%;
+  /* background-color: orange ; */
+}
+.controls {
+  width: 25%;
+  /* background-color: green; */
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-control-icon {
+  height: 1rem;
+  margin-right: 1.5rem;
+  /* width: 1rem; */
+  opacity: 0.6;
+}
+.player-control-icon:hover {
+  opacity: 1;
+}
+
+.playback-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+
+.progress-bar {
+  width: 70%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer; /*hand symbol*/
+}
+.progress-bar::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+/* ***********Home work ************ */
+/* ***********Adding  : Albums and  controls */
+.album {
+  /* background-color: red; */
+  display: flex;
+}
+.picture {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.45rem;
+}
+.song-title {
+  font-size: small;
+  font-weight: bold;
+  padding-right: 1.25rem;
+  margin: 0;
+}
+.singer {
+  font-size: small;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.album-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+.album-icon img {
+  height: 2rem;
+  width: 1.5rem;
+  padding-right: 0.45rem;
+  opacity: 0.6;
+}
+#heart {
+  height: 1.3rem;
+  width: 1.1rem;
+}
+
+/* now controls */
+.controls {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-icons img {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-right: 0.35rem;
+}
+
+#i3rd {
+  height: 1.2rem;
+  width: 1.2rem;
+  opacity: 0.6;
+  padding-bottom: 0.1rem;
+}
+#i4th {
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.6;
+  padding-bottom: 0.2rem;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rangerr {
+  cursor: pointer;
+  appearance: none;
+}
+.rangerr::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+.rangerr::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  background-color: #007fff;
+  border-radius: 50%;
+  margin-top: -6px;
+}
